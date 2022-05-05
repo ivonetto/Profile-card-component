@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --DarkCyan: #18A1AE;
+    --DesaturatedBlue: #2D3248;
+    --GrayishBlue: #696E81;
+    --DarkGray: #969696;
+    --KumbhSans: 'Kumbh Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--KumbhSans);
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: var(--DarkCyan);
+    background-image: 
+        url(/images/bg-pattern-top.svg),
+        url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: 
+        calc(50% - 32rem) calc(50% - 24rem),
+        calc(50% + 28rem) calc(50% + 31.5rem);
+    background-attachment: fixed;
+}
+
+.display-component{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 3.5rem;
+}
+
+.container{
+    margin-inline: auto;
+}
+
+.card{
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 22rem;
+    box-shadow: 0 1.8rem 3rem 0 rgba(0, 0, 0, 0.175);
+}
+
+.card-header{
+    background: url(/images/bg-pattern-card.svg) top center repeat-x;
+    display: grid;
+    grid-template-rows: repeat(3, 4rem);
+}
+
+.card-img{
+    grid-row: 2 / 4;
+    place-self: center;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card-content{
+    text-align: center;
+    padding-bottom: 1.3rem;
+}
+
+.card-name{
+    font-weight: 700;
+}
+
+.card-age{
+    color: var(--GrayishBlue);
+    font-weight: 400;
+}
+
+.card-location{
+    color: var(--GrayishBlue);
+    font-weight: 400;
+}
+
+.card-footer{
+    border-top: 0.07rem solid var(--DarkGray);
+    padding: 1rem 2rem;
+}
+
+.card-footer-info{
+    color: var(--DesaturatedBlue);
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    text-align: center;
+}
+
+.card-footer-info span{
+    display: block;
+    letter-spacing: 0.15em;
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.attribution { font-size: 0.688rem; text-align: center; }
+.attribution a { color: white; }
